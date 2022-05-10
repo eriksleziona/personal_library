@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 
-{% block content %}
 
-<h1> Welcome</h1>
+{% block content %}
+<div class="container d-flex justify-content-evenly m-5">
+{% for book in books_list %}
+    <div class="card" style="width: 18rem;">
+    <img src="{{ book.image_url}}" class="card-img-top" style="height: 100%;" alt="...">
+        <div class="card-body">
+            <p class="card-text">{{ book.author }}</p>
+            <p class="card-text">{{ book.title }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
