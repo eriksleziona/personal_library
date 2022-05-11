@@ -1,0 +1,17 @@
+{% extends 'custom_header.html' %}
+{% load django_bootstrap5 %}
+
+{% block login_content %}
+<div class="container">
+  <form action="" method="post" class="form">
+  {% csrf_token %}
+
+  {% bootstrap_form form %}
+
+  {% bootstrap_button button_type="submit" content="Login" %}
+
+</form>
+
+</div>
+
+{% endblock %}
