@@ -26,3 +26,6 @@ class Book(models.Model):
     description = models.TextField()
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
     category = models.ManyToManyField('Category', blank=True)
+
+    def __str__(self):
+        return f"{self.author} : {self.title}"
